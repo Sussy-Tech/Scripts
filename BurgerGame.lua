@@ -1,13 +1,29 @@
 local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/drillygzzly/Roblox-UI-Libs/main/Mercury%20Lib/Mercury%20Lib%20Source.lua"))()
--- fart
 local GUI = Mercury:Create{
     Name = "Fart Hub",
     Size = UDim2.new(0, 650, 0, 450),
-    Theme = Mercury.Themes.Dark
+    Theme = Mercury.Themes.Legacy
 }
+local prompt = GUI:Prompt{
+    Title = "Join Discord Server",
+    Text = "Do you want to join our Discord server?",
+    Buttons = {
+        Yes = function()
+            setclipboard("https://discord.gg/8BYdyagS2V")
+            GUI:Notification{
+                Title = "Copied!",
+                Text = "The Discord link has been copied to your clipboard.",
+                Duration = 2
+            }
+        end,
+        No = function()
+        end
+    }
+}
+prompt:Show()
+
 local Tab = GUI:Tab {
-    Name = "Orders",
-    Icon = "rbxassetid//233249802"
+    Name = "Orders"
 }
 GUI:Credit {
     Name = "Ivan",
@@ -81,7 +97,7 @@ createButton("Trays")
 createButton("Meat")
 
 Tab:Toggle {
-    Name = "Order when under _",
+    Name = "Order When Under _",
     StartingState = false,
     Description = "Orders any ingredient when it has less than the selected amount",
     Callback = function(state)
@@ -92,7 +108,7 @@ Tab:Toggle {
     end
 }
 Tab:Textbox {
-    Name = "Amount to Order",
+    Name = "Order When Under",
     Callback = function(text)
         local num = tonumber(text)
         if (num == nil) then 
@@ -108,8 +124,8 @@ Tab:Textbox {
 }
 
 while true do
-    wait(2)
-    game:GetService("UserInputService").MouseIconEnabled = true
+	game:GetService("UserInputService").MouseIconEnabled = true
+    wait(5)
 end
 
 GUI:SetZIndex(99999999999)
