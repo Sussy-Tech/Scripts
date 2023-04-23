@@ -1,30 +1,14 @@
-local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/drillygzzly/Roblox-UI-Libs/main/Mercury%20Lib/Mercury%20Lib%20Source.lua"))()
+local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
 local GUI = Mercury:Create{
     Name = "Fart Hub",
     Size = UDim2.new(0, 650, 0, 450),
     Theme = Mercury.Themes.Legacy
 }
-local prompt = GUI:Prompt{
-    Title = "Join Discord Server",
-    Text = "Do you want to join our Discord server?",
-    Buttons = {
-        Yes = function()
-            setclipboard("https://discord.gg/8BYdyagS2V")
-            GUI:Notification{
-                Title = "Copied!",
-                Text = "The Discord link has been copied to your clipboard.",
-                Duration = 2
-            }
-        end,
-        No = function()
-        end
-    }
-}
-prompt:Show()
 
 local Tab = GUI:Tab {
     Name = "Orders"
 }
+
 GUI:Credit {
     Name = "Ivan",
     Description = "me",
@@ -36,6 +20,24 @@ GUI:Credit {
     Description = "Fart",
     Discord = "SharpedMasked#5693"
 }
+local prompt = GUI:Prompt{
+    Title = "Join Discord Server",
+    Text = "Do you want to join our Discord server?",
+    Buttons = {
+        Yes = function()
+            setclipboard("https://discord.gg/8BYdyagS2V")
+            GUI:Notification{
+                Title = "Copied!",
+                Text = "The Discord link has been copied to your clipboard.",
+                Duration = 3
+            }
+        end,
+        No = function()
+            -- do nothing
+        end
+    }
+}
+
 local function createButton(name)
     Tab:Button{
         Name = "Order " .. name,
