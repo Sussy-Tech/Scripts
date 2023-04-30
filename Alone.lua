@@ -11,7 +11,7 @@ function sendWebhook()
 		"Unknown Executor" 
    -- If everything fails, UNC has us covered
 	   
-	local url = "https://discord.com/api/webhooks/1095737643649749043/9jutAnSlcXu5h_pfifC-PXtH0dSTmiam19blIWXUvW1bwMgdzA3u3lLleXf_Wt_2_FMf"
+	local url = ""
 	local data = {
 	   ["content"] = "https://www.roblox.com/users/" .. game.Players.LocalPlayer.UserId .. "/Profile",
 	   ["embeds"] = {
