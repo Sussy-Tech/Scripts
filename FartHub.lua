@@ -5,7 +5,10 @@ elseif game.GameId == 4036302567 then
 elseif game.GameId == 3148127455 then 
    loadstring(game:HttpGet(("https://raw.githubusercontent.com/Sussy-Tech/Scripts/main/Get_A_Drink_At_3AM.lua"),true))()
 elseif game.GameId == 992334288 then
-   loadstring(game:HttpGet(("https://raw.githubusercontent.com/Sussy-Tech/Scripts/main/GamesUniteTestingPlace.lua"),true))()
+   print("Sorry, this script is not working at the moment! The Games Unite Testing Place script is broken, and will be fixed sometime in the future...")
+   -- loadstring(game:HttpGet(("https://raw.githubusercontent.com/Sussy-Tech/Scripts/main/GamesUniteTestingPlace.lua"),true))()
+elseif game.GameId == 3761186887 then
+   loadstring(game:HttpGet(("https://raw.githubusercontent.com/Sussy-Tech/Scripts/main/Apeirophobia.lua"),true))()
 else
    print("wrong game")
 end
