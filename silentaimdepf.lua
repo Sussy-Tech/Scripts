@@ -1,12 +1,15 @@
+
 -- options
 local fov = fov or 180;
 local hitPart = hitPart or "head";
 local headChance = headChance or 0.5;
 local randomization = randomization or 0;
 local visibleCheck = visibleCheck or false;
+
 -- variables
 local localPlayer = game:GetService("Players").LocalPlayer;
 local camera = game:GetService("Workspace").CurrentCamera;
+
 -- modules
 local newParticle, solveQuartic, entryTable;
 for _, object in ipairs(getgc()) do
@@ -25,6 +28,7 @@ for _, object in ipairs(getgc()) do
         break;
     end
 end
+
 -- functions
 local function getClosest(origin, direction, ignoreList)
     local _angle = fov;
@@ -49,6 +53,7 @@ local function getClosest(origin, direction, ignoreList)
     end
     return _vector, _entry;
 end
+
 local function getTrajectory(vector, velocity, gravity, speed)
     local r1, r2, r3, r4 = solveQuartic(
         gravity:Dot(gravity) * 0.25,
@@ -61,6 +66,8 @@ local function getTrajectory(vector, velocity, gravity, speed)
     local bullet = (vector + velocity*time + 0.5*gravity*time^2) / time;
     return bullet, time;
 end
+
+-- hooks
 local old;
 old = hookfunction(newParticle, function(args)
     if debug.info(2, "n") == "fireRound" then
