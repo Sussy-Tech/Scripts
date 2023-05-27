@@ -1,4 +1,3 @@
-
 -- options
 local fov = fov or 180;
 local hitPart = hitPart or "head";
