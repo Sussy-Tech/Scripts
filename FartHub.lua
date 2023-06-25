@@ -8,6 +8,8 @@ elseif game.GameId == 992334288 then
    loadstring(game:HttpGet(("https://raw.githubusercontent.com/Sussy-Tech/Scripts/main/GamesUniteTestingPlace.lua"),true))()
 elseif game.GameId == 3761186887 then
    loadstring(game:HttpGet(("https://raw.githubusercontent.com/Sussy-Tech/Scripts/main/Apeirophobia.lua"),true))()
+elseif game.GameId == 847722000 then
+   loadstring(game:HttpGet(("https://raw.githubusercontent.com/Sussy-Tech/Scripts/main/RakeScript.lua"),true))()
 else
    print("wrong game")
 end
