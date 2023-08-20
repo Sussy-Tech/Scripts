@@ -6,7 +6,7 @@ local function waitForRespawn()
         if not humanoid.Health > 0 then
             local characterAddedEvent = player.CharacterAdded:Wait()
             humanoid = characterAddedEvent:WaitForChild("Humanoid")
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/YourGitHubUsername/YourRepositoryName/YourScriptName.lua"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Sussy-Tech/Scripts/main/royalehigh.lua"))()
         end
         wait(1)
     end
